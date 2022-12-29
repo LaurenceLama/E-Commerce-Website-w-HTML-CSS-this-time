@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    max-height: 50%;
+
+}
+
+p {
+    line-height: 1.5;
+}
+
+.purple {
+    color: #7342d6;
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav__container {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.nav__link {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7342d6;
+}
+
+.nav__link--primary {
+    border: 2px solid  #7342d6;
+    border-radius: 6px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link--primary:hover {
+    text-decoration: none;
+}
+
+
+
+
+/* Landing Below */
+
+
+
+#landing {
+    background-color: rgb(115, 66, 214, 0.1);
+}
+
+header {
+    height: calc(100vh- 80px);
+}
+
+.header__container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #7342d6;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.btn {
+    background-color: #7342d6;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+}
+
+.header__img--wrapper {
+    padding: 32px;
+
+    /* to make img in front of the wave */
+    z-index: 2;
+    /* while the wave is at zindex=1 */
+}
+
+
+
+/* before highlights (basically the generals) */
+
+
+.container {
+    padding: 56px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+
+/* ONTO Highlighters */
+
+
+
+/* Inputting the waves at the end of the,,, header? I'll go with the either side of library */
+
+#highlights {
+    position: relative;
+}
+
+#highlights:before,
+#highlights:after {
+    content: "";
+    background: url('assets/wave.svg');
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#highlights:before {
+    top: 1px;
+    transform: translateY(-100%);
+}
+
+#highlights:after {
+    bottom: 1px;
+    transform: translateY(100%) rotate(180deg);
+}
+
+/* Inputting the waves at the end of the,,, header? THE END */
+
+
+
+/* ONTOooo Highlighterssss */
+
+
+.highlight__wrapper {
+    display: flex;
+}
+
+.highlight {
+    padding: 0 24px;
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.highlight__para {
+    text-align: center;
+    max-width: 300px;
+}
+
+.highlight__img {
+    border: 2px solid #7342d64b;
+    color: #7342d6;
+    width:  80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.highlight__subtitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+
+
+/* Features */
+
+
+
+
+#features {
+    background-color: rgb(115, 66, 214, 0.1);
+    padding-top: 8vw;
+}
+
+.books {
+    display: flex;
+    /* justify-content: space-around;
+    align-items: center; I guess ill copy first
+    This thing works in alteration with width 25% and padding */
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+}
+
+.book__img {
+    max-height: 400px;
+    transition: all 300ms ease-in-out;
+    cursor: no-drop;
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book__img {
+    transform: scale(1.05);
+}
+
+.book__title {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings {
+    color: #fabf2a;
+    margin-bottom: 8px;
+}
+
+.book__price--normal {
+    text-decoration: line-through;
+    color: #bfbfbf;
+    padding-right: 4px;
+}
+
+.book__title,
+.book__ratings,
+.book__price {
+    text-align: center;
+}
+
+
+
+/* Recentsssss */
+
+
+
+
+.recent--align {
+    text-align: left;
+    font-size: 20px;
+}
+
+.books--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Why does it not push smoothlyyyy */
