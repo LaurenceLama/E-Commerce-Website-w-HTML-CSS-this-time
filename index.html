@@ -17,9 +17,28 @@
         <div class="nav__container">
           <img class="logo" src="./assets/Library.svg" alt="Library" />
           <ul class="nav__links">
-            <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#" class="nav__link">Contact</a></li>
+            <li><a href="#" class="nav__link link__hover-effect">Home</a></li>
+            <li><a href="#" class="nav__link link__hover-effect">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
+          </ul>
+        </div>
+        <button class="btn__menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul>
+            <li class="menu__list">
+              <a href="#" class="menu__link">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#features" class="menu__link">Books</a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link no-cursor">Contacts</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -35,7 +54,7 @@
             </a>
           </div>
           <figure class="header__img--wrapper">
-            <img src="./assets/Undraw_Books.svg" alt="" />
+            <img src="./assets/Undraw_Books.svg" class="header__img" alt="" />
           </figure>
         </div>
       </header>
@@ -343,13 +362,13 @@
             </figure>
           </a>
           <div class="footer__list">
-            <a href="#" class="footer__link">Home</a>
-            <a href="#" class="footer__link">About</a>
-            <a href="#" class="footer__link">Books</a>
-            <a href="#" class="footer__link">Contact</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">Home</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">About</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">Books</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">Contact</a>
           </div>
           <h3 class="copyright">
-            Copyright © 2022 Library
+            Copyright &copy; 2022 Library
           </h3>
         </div>
       </div>
