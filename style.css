@@ -161,6 +161,18 @@ button:active {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
+
+    /* starting below here is for assigning the positioning of texts at #explore */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* other sections were not affected by this (for some reason), but 1 thing I logic is there internal div is prioritized more than outer divs */
+
+    /* If u not understand, I have explain for dumb dumbs (aka. future me), outer divs like .row and .container have less priority than divs that are encoded much more inside a section */
+
+    /* much more inside divs such as code no. 216,220, and more (216=.highlight__wrapper, 220=highlight) */
+
+    /* it is said to add a another class beside row namely row__column, but if it works like this, I WONT COMPLAIN. IT WORKS */
 }
 
 
@@ -248,10 +260,15 @@ button:active {
 
 
 
-#features {
+#features,
+#explore {
     background-color: rgb(115, 66, 214, 0.1);
+}
+
+#features {
     padding-top: 8vw;
 }
+
 
 .books {
     display: flex;
@@ -327,3 +344,45 @@ button:active {
 }
 
 /* Why does it not push smoothlyyyy */
+
+
+/* Anyway we go EXPLORE */
+
+/* It's done i guess, refer to code number 165 and 264 */
+
+
+
+/* I GUESS WE ARE IN THE FOOTER NOWW */
+
+
+
+footer {
+    background-color: #121212ed;
+}
+
+.footer__logo {
+    width: 100%;
+    max-width: 260px;
+}
+
+.footer__logo--img {
+    /* how to make colored image white pls  */
+}
+
+.footer__list {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__link,
+.copyright {
+    text-decoration: none;
+    color: white;
+    padding: 8px 0;
+}
+
+.copyright {
+    font-size: 16px;
+}
