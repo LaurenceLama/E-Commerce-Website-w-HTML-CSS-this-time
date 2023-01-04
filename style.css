@@ -203,10 +203,12 @@ li {
     background-color: rgb(115, 66, 214, 0.1);
 }
 
-header {
-    /* height: calc(100vh- 80px); */
-    /* this instructed thing, ye I will find I better looking one, this thing affects the header image btw  */
-}
+/* header {
+    height: calc(100vh- 80px);
+    this instructed thing, ye I will find I better looking one, this thing affects the header image btw 
+
+    idk why, but for info smth purposes imma keep this here
+} */
 
 .header__container {
     width: 100%;
