@@ -141,6 +141,7 @@ li {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 
 .menu__backdrop {
@@ -151,6 +152,45 @@ li {
     right: 0;
     left: 0;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 260ms ease-in-out;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: white;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 24px 0;
+}
+
+.menu__link {
+    font-size: 36px;
+    color: white;
 }
 
 
@@ -298,13 +338,14 @@ button:active {
 
 .highlight__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .highlight {
     padding: 0 24px;
     width: calc(100% / 3);
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 }
@@ -468,4 +509,75 @@ footer {
     color: white;
     padding-top: 12px; 
     font-size: 16px;
+}
+
+
+
+
+/* For smaller screens, aka showing za burgerr */
+/* Media queries, totally did not forget the name */
+
+
+/* Small phones, large smartphones, tablets */
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px;
+    }
+
+    .header__description {
+        padding: 20px;
+    }
+
+    .header__img--wrapper {
+        padding-bottom: 42px;
+    }
+
+    .container {
+        padding: 24px 12px;
+    }
+
+    .books {
+        /* just to make run the 50% width for featured books section */
+        flex-wrap: wrap;
+    }
+
+    .book {
+        width: 50%;
+    }
+}
+
+
+
+/* Small phones, large smartphones */
+
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .highlight__subtitle {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .highlight {
+        width: 100%;
+    }
+    
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
+    }
 }
